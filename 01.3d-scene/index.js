@@ -13,13 +13,11 @@ const scene = new THREE.Scene(); // 创建 Scene
     mesh.position.set(0, 0, 0); // 位置
     scene.add(mesh); // 添加物体 Mesh
 
-    Gui(mesh)
-}
 
-{
     const pointLight = new THREE.PointLight(0xffffff, 10000); // 白色，光照强度10000
     pointLight.position.set(80, 80, 80); // 位置 默认照向 0,0,0 的方向
     scene.add(pointLight); // 添加灯光 Light
+    Gui({ mesh, pointLight })
 }
 {
   const axesHelper = new THREE.AxesHelper(200); // 展示坐标系工具 AxesHelper 坐标轴长度200

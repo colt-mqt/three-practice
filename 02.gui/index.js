@@ -1,6 +1,6 @@
 import { GUI } from 'three/addons/libs/lil-gui.module.min.js';
 
-export default function Gui(mesh) {
+export default function Gui({ mesh, pointLight }) {
   const gui = new GUI(); // 可视化调试 立方体大小、相机位置、光照强度等
 
   const meshFolder = gui.addFolder('立方体');
